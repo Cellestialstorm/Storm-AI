@@ -1,0 +1,77 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+dists/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+.env/
+.ENV/
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Local configuration files
+config.ini
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Coverage reports
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Model files (if not needed in repo)
+# models/vosk/*
+# !models/vosk/model-readme.txt
+
+# Memory and data files
+memory/memory.json
+memory/reminders.json
+memory/*.json
+
+# Testing
+.pytest_cache/
+.coverage*
+
+# Documentation builds
+docs/_build/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
