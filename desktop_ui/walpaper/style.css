@@ -1,0 +1,122 @@
+:root {
+    --eye-color: #00f2ff;
+    /* Made glow slightly more transparent for better pulsing contrast */
+    --glow-color: rgba(0, 242, 255, 0.6);
+    --bg-color: #050505;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.eye-wrapper {
+    display: flex;
+    gap: 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.eye {
+    width: 80px;
+    height: 80px;
+    background-color: var(--eye-color);
+    border-radius: 50%;
+    /* Base glow */
+    box-shadow: 0 0 20px var(--glow-color), 0 0 50px var(--glow-color);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.eye.left {
+    animation-delay: 0s;
+}
+
+.eye.right {
+    animation-delay: 0.05s;
+}
+
+/* --- STATES --- */
+
+/* Calm baseline: red blinking */
+.calm .eye {
+    animation: blink 5s infinite;
+}
+
+/* Alert: active / speaking */
+.alert .eye {
+    animation: sonar 1.5s infinite ease-out;
+    border: 2px solid white;
+}
+
+/* Narrow: enforcement stare */
+.narrow .eye {
+    height: 15px;
+    width: 100px;
+    border-radius: 5px;
+    animation: none;
+    box-shadow: 0 0 60px rgba(255, 0, 0, 0.9);
+}
+
+/* Sleep: eyes closed */
+.sleep .eye {
+    height: 8px;
+    width: 80px;
+    border-radius: 8px;
+    animation: none;
+}
+
+/* ---------------------- */
+#focus-overlay {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 0, 0, 0.08),
+        rgba(255, 0, 0, 0.15)
+    );
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+    z-index: 1;
+}
+
+/* Default ambient pressure */
+.calm #focus-overlay {
+    opacity: 1;
+}
+
+/* --- ANIMATIONS --- */
+
+@keyframes blink {
+    0%, 90%, 100% { transform: scaleY(1); }
+    95% { transform: scaleY(0.1); }
+}
+
+/* --- NEW ANIMATION --- */
+@keyframes speakGlow {
+    0% {
+        /* Standard glow */
+        box-shadow: 0 0 20px var(--glow-color), 0 0 50px var(--glow-color);
+        opacity: 1;
+    }
+    100% {
+        /* Intense, wider glow */
+        box-shadow: 0 0 40px var(--glow-color), 0 0 90px var(--glow-color);
+        opacity: 0.9; /* Slight core flicker */
+    }
+}
+/* --------------------- */
+
+/* (Removed the old 'jitter' animation as it's no longer used) */
+
+@keyframes sonar {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.8; box-shadow: 0 0 80px var(--eye-color); }
+    100% { transform: scale(1); opacity: 1; }
+}
