@@ -38,7 +38,10 @@ Storm v2 maintains the modular architecture of v1 while introducing several new 
 
 1. Clone the repository
 2. Install dependencies: `pip install -r requirements.txt` (or use uv if configured)
-3. Ensure you have the required Vosk speech recognition model
+3. **Set up the models directory**:
+   - Create a `models/` folder in the project root if it doesn't exist
+   - Add the Vosk speech recognition model: `models/vosk/vosk-model-en-in-0.5/`
+   - You can download the model from [Vosk Models](https://alphacephei.com/vosk/models) (English India model recommended)
 4. Install additional dependencies for Windows-specific features
 5. Run the application: `python main.py`
 
