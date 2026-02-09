@@ -75,3 +75,6 @@ docs/_build/
 
 # Jupyter Notebook
 .ipynb_checkpoints/
+
+#models folder
+models/
