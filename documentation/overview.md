@@ -1,6 +1,6 @@
-# Storm v2 Overview
+# Storm Overview
 
-Storm v2 is an advanced evolution of the AI-powered personal assistant system, featuring enhanced contextual awareness, focus enforcement capabilities, and an immersive desktop interface. The system builds upon v1's foundation with significant improvements in user productivity, contextual intelligence, and behavioral guidance.
+Storm is an AI-powered personal assistant system featuring advanced contextual awareness, focus enforcement capabilities, and an immersive desktop interface. The system provides intelligent voice interaction, context-aware computing, and behavioral guidance for enhanced user productivity.
 
 ## Key Features
 
@@ -16,7 +16,7 @@ Storm v2 is an advanced evolution of the AI-powered personal assistant system, f
 - Task-specific application allowances
 - Behavioral intervention system
 
-## Major Improvements Over v1
+## Key Capabilities
 
 - Real-time context tracking based on active applications
 - Proactive focus enforcement with application blocking
@@ -48,8 +48,8 @@ Web-based interface with animated elements
 ### Task Profiling System
 Detects and adapts to user activities
 
-### All v1 components
-Retained and enhanced functionality
+### Command System
+Intelligent command routing and execution
 
 ## How It Works
 
@@ -59,8 +59,8 @@ Retained and enhanced functionality
 4. **Personality Interactions**: Provides behavioral feedback based on user patterns
 5. **Guidance System**: Offers productivity coaching at appropriate times
 6. **Visual Feedback**: Animated UI reflects system state
-7. **Traditional Voice Functions**: Maintains all v1 voice capabilities
+7. **Voice Functions**: Complete voice command capabilities
 
 ## Architecture
 
-Storm v2 maintains the modular architecture of v1 while introducing several new subsystems for enhanced intelligence and user engagement. The system now runs seven concurrent threads for comprehensive functionality.
+Storm features a modular architecture with multiple integrated subsystems for intelligence and user engagement. The system runs seven concurrent threads for comprehensive functionality.

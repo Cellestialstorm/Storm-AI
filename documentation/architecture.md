@@ -1,8 +1,8 @@
-# Storm v2 Architecture
+# Storm Architecture
 
 ## System Architecture
 
-Storm v2 introduces a significantly enhanced architecture compared to v1, with additional subsystems focused on contextual awareness and user productivity enhancement. The system maintains backward compatibility while adding advanced behavioral and productivity features.
+Storm features an advanced architecture with multiple subsystems focused on contextual awareness and user productivity enhancement. The system provides intelligent integration of voice interaction, context tracking, and behavioral guidance capabilities.
 
 ### Enhanced Component Interaction Diagram
 ```
@@ -17,9 +17,9 @@ Storm v2 introduces a significantly enhanced architecture compared to v1, with a
 [Personality Engine] ← [Guidance System] ← [Intervention Logic]
 ```
 
-## Enhanced Threading Model
+## Threading Model
 
-Storm v2 utilizes a more complex multi-threading approach with seven concurrent threads:
+Storm utilizes a multi-threading approach with seven concurrent threads:
 
 1. **Reminder Thread**: Monitors and delivers scheduled reminders (reminders.py)
 2. **Context Thread**: Tracks active applications and user behavior (tracker.py)
@@ -29,7 +29,7 @@ Storm v2 utilizes a more complex multi-threading approach with seven concurrent 
 6. **UI Server Thread**: Runs web server for animated desktop interface (server.py)
 7. **Assistant Loop**: Main voice interaction loop (assistant_loop.py)
 
-## New Subsystems Architecture
+## Subsystems Architecture
 
 ### Context Awareness System
 
@@ -102,15 +102,15 @@ The guidance system provides productivity coaching:
 
 ## Integration Architecture
 
-All subsystems integrate seamlessly with the existing v1 architecture:
-- Voice processing maintains the same pipeline
-- Memory and command routing preserved
-- New context information feeds into existing components
-- UI state management enhanced with new features
+All subsystems integrate seamlessly:
+- Voice processing pipeline for command handling
+- Memory and command routing for intelligent responses
+- Context information feeds into all components
+- UI state management for real-time visual feedback
 
 ## Data Flow Architecture
 
-Enhanced data flows in Storm v2:
+Core data flows in Storm:
 1. **Context Flow**: Window → Classification → Context State → Subsystems
 2. **Focus Flow**: Task Detection → Profile Selection → Enforcement → Process Control
 3. **Guidance Flow**: Context + Duration → Rule Evaluation → Intervention → Feedback

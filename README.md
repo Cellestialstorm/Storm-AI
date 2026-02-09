@@ -1,6 +1,6 @@
-# Storm v2 - AI Voice Assistant with Productivity Enhancement
+# Storm - AI Voice Assistant with Productivity Enhancement
 
-Storm v2 is an advanced evolution of the AI-powered personal assistant system, featuring enhanced contextual awareness, focus enforcement capabilities, and an immersive desktop interface. The system builds upon v1's foundation with significant improvements in user productivity, contextual intelligence, and behavioral guidance.
+Storm is an AI-powered personal assistant system with advanced contextual awareness, focus enforcement capabilities, and an immersive desktop interface. The system provides intelligent voice interaction, context-aware computing, and behavioral guidance for enhanced productivity.
 
 ## Features
 
@@ -23,16 +23,16 @@ Storm v2 is an advanced evolution of the AI-powered personal assistant system, f
 
 ## Architecture
 
-Storm v2 maintains the modular architecture of v1 while introducing several new subsystems:
+Storm features a modular architecture with multiple integrated subsystems:
 
-- **Enhanced Voice Module**: Improved speech processing pipeline
+- **Voice Module**: Intelligent speech processing pipeline
 - **Context Tracker**: Monitors active applications and user behavior
 - **Focus Control System**: Enforces productivity through application management
 - **Personality Engine**: Drives personalized user interactions
 - **Guidance System**: Provides productivity coaching and interventions
 - **Desktop UI Server**: Web-based interface with animated elements
 - **Task Profiling System**: Detects and adapts to user activities
-- **All v1 components**: Retained and enhanced functionality
+- **Command System**: Intelligent command routing and execution
 
 ## Installation
 
@@ -47,7 +47,7 @@ Storm v2 maintains the modular architecture of v1 while introducing several new 
 
 ## Dependencies
 
-### Core Dependencies (from v1)
+### Core Dependencies
 - `vosk` - Offline speech recognition
 - `pyttsx3` - Text-to-speech synthesis
 - `pyaudio` - Audio processing
@@ -56,8 +56,6 @@ Storm v2 maintains the modular architecture of v1 while introducing several new 
 - `appopener` - Application control
 - `keyboard` and `pyautogui` - System interaction
 - `psutil` - System monitoring
-
-### New Dependencies (v2 specific)
 - `flask` - Web server for UI
 - `flask-cors` - Cross-origin resource sharing
 - `pywin32` - Windows-specific GUI operations (win32gui, win32process)
@@ -75,7 +73,7 @@ Storm v2 maintains the modular architecture of v1 while introducing several new 
 
 Storm v2 includes an animated desktop interface located in the `desktop_ui/walpaper/` folder. To use this as a Lively Wallpaper:
 
-1. Download and install [Lively Wallpaper](https://rocksdanister.github.io/lively/) from the official website
+1. Dowad and install [Lively Wallpaper](https://rocksdanister.github.io/lively/) from the official website
 2. Copy the contents of the `desktop_ui/walpaper/` folder to a convenient location
 3. In Lively Wallpaper settings, add a new "Website" wallpaper
 4. Point it to the `index.html` file in the walpaper folder
@@ -89,20 +87,18 @@ The animated interface will reflect the system state:
 
 ## Commands Supported
 
-### Traditional Commands (from v1)
+### Supported Commands
 - **Application Control**: "Open Chrome", "Close Notepad"
 - **Memory Operations**: "Remember my name is John", "Recall my phone number"
 - **Reminders**: "Remind me to call mom at 5 PM"
 - **Web Browsing**: "Open YouTube", "Search for Python tutorials"
 - **Text Input**: "Type 'Hello World' in the current window"
 - **System Tasks**: "Take a screenshot"
-
-### Enhanced Productivity Commands (v2)
 - **Focus Mode**: Activate focus mode to block distractions
 - **Task Detection**: System automatically detects your activity type
 - **Behavioral Coaching**: Receive productivity tips and encouragement
 
-## New Modules (v2 specific)
+## Core Modules
 
 ### Context Module
 - **tracker.py**: Monitors active windows and applications

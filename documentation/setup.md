@@ -1,6 +1,6 @@
-# Storm v2 Setup Guide
+# Storm Setup Guide
 
-This guide provides detailed instructions for setting up Storm v2 on your system.
+This guide provides detailed instructions for setting up Storm on your system.
 
 ## Prerequisites
 
@@ -15,8 +15,8 @@ This guide provides detailed instructions for setting up Storm v2 on your system
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/storm-v2.git
-cd storm-v2
+git clone https://github.com/yourusername/storm.git
+cd storm
 ```
 
 ### 2. Set Up Models Directory
@@ -26,7 +26,7 @@ The models directory is **required** for speech recognition to work.
 #### Directory Structure
 
 ```
-Storm v2/
+Storm/
 ├── models/
 │   └── vosk/
 │       └── vosk-model-en-in-0.5/
@@ -71,7 +71,7 @@ uv pip install -r requirements.txt
 
 ### 4. Install Windows-Specific Dependencies
 
-Storm v2 requires some Windows-specific packages:
+The system requires some Windows-specific packages:
 
 ```bash
 pip install pywin32
@@ -101,7 +101,7 @@ python -c "import pyttsx3; import keyboard; import psutil; print('Dependencies O
 
 ### Audio Device Selection
 
-If you have multiple audio input/output devices, you may need to configure which ones Storm v2 uses.
+If you have multiple audio input/output devices, you may need to configure which ones Storm uses.
 
 1. List available audio devices:
    ```bash
@@ -112,14 +112,14 @@ If you have multiple audio input/output devices, you may need to configure which
 
 ### Desktop UI (Lively Wallpaper)
 
-To use Storm v2's animated desktop interface:
+To use Storm's animated desktop interface:
 
 1. Install [Lively Wallpaper](https://rocksdanister.github.io/lively/)
 2. Copy the contents of `desktop_ui/walpaper/` to a folder on your system
 3. In Lively Wallpaper, add a new "Website" wallpaper
 4. Point to the `index.html` file from the walpaper folder
 
-## Running Storm v2
+## Running Storm
 
 ### Start the Application
 
@@ -139,7 +139,7 @@ Waiting for wake word activation...
 
 1. **Wake Word**: Say "Hey Storm" to activate
 2. **Command**: After the "How may I help you?" prompt, issue your command
-3. **Response**: Storm will respond with voice feedback
+3. **Response**: The system will respond with voice feedback
 4. **Desktop UI**: The animated wallpaper (if configured) will reflect the system state
 
 ### Supported Commands

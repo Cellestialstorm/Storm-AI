@@ -1,13 +1,13 @@
-# Storm v2 Modules Documentation
+# Storm Modules Documentation
 
 ## Voice Module
 
 ### assistant_loop.py
-Enhanced main orchestration module with context integration:
-- Maintains backward compatibility with v1 functionality
-- Integrates with new context state system
+Main orchestration module:
+- Orchestrates voice interaction and context integration
+- Integrates with context state system
 - Updates desktop UI state through set_ui_state()
-- Removed overlay dependency, now uses web-based UI
+- Uses web-based UI for system feedback
 - Prints context state for debugging purposes
 - Coordinates with focus actions for productivity features
 
@@ -209,53 +209,52 @@ Client-side UI state synchronization:
 - Maps system modes to visual states (idle, speaking, enforcement)
 - Handles error cases gracefully
 
-## System Modules (from v1, retained)
+## System Modules
 
 ### command_router.py
-Retained from v1 with same functionality for backward compatibility.
+Intelligent command routing system that processes user commands and directs them to appropriate handlers.
 
 ### validator.py
-Retained from v1 with same functionality for backward compatibility.
+Command and input validation system ensuring safe and appropriate execution.
 
 ### security.py
-Retained from v1 with same functionality for backward compatibility.
+Security and safety module for command verification and user protection.
 
-## LLM Module (from v1, retained)
+## LLM Module
 
 ### model.py
-Retained from v1 with same functionality for backward compatibility.
+Language model integration for natural language understanding and response generation.
 
 ### parser_llm.py
-Retained from v1 with same functionality for backward compatibility.
+LLM output parsing and command interpretation system.
 
-## RAG Module (from v1, retained)
+## RAG Module
 
 ### ingest.py
-Retained from v1 with same functionality for backward compatibility.
+Retrieval-augmented generation data ingestion system.
 
 ### query.py
-Retained from v1 with same functionality for backward compatibility.
+RAG query processing and semantic search functionality.
 
-## Memory Module (from v1, retained)
+## Memory Module
 
 ### controller.py
-Retained from v1 with same functionality for backward compatibility.
+Memory management system controller.
 
 ### store.py
-Retained from v1 with same functionality for backward compatibility.
+Persistent storage layer for user information.
 
 ### reminders.py
-Retained from v1 with same functionality for backward compatibility.
+Reminder and scheduled notification system.
 
 ## Main Module
 
 ### main.py
-Enhanced entry point with additional subsystems:
+Main entry point with complete subsystem integration:
 - Maintains graceful shutdown handling
-- Adds threads for new subsystems (context, guidance, watchdog, personality, UI server)
-- Preserves all v1 threading model
-- Adds seven new threads for enhanced functionality
-- Maintains signal handling for proper cleanup
+- Manages threads for all subsystems (context, guidance, watchdog, personality, UI server)
+- Implements seven concurrent threads for comprehensive functionality
+- Handles signal processing for proper cleanup
 
 ## Test Module
 
